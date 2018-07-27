@@ -19,10 +19,10 @@ app.use(session ({
 
     
 app.use(bodyParser.json());
-app.post('/api/register', ct.register);
-app.post('/api/login', ct.login);
-app.get('/api/posts', ct.getPosts);
-app.get('/api/search', ct.searchPosts);
+app.post('/api/auth/register', ct.register);
+app.post('/api/auth/login', ct.login);
+app.get('/api/posts/:id', ct.getPosts);
+app.get('/api/search/:post_id', ct.searchPosts);
 
 
 
